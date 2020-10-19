@@ -1,23 +1,23 @@
-DROP TABLE IF EXISTS "public"."Color";
+DROP TABLE IF EXISTS "Color";
 -- This script only contains the table creation statements and does not fully represent the table in database. It's still missing: indices, triggers. Do not use it as backup.
 
 -- Squences
 CREATE SEQUENCE IF NOT EXISTS "Color_idColor_seq"
 
 -- Table Definition
-CREATE TABLE "public"."Color" (
+CREATE TABLE "Color" (
     "idColor" int4 NOT NULL DEFAULT nextval('"Color_idColor_seq"'::regclass),
     "colorName" varchar,
     PRIMARY KEY ("idColor")
 );
 
-INSERT INTO "public"."Color" ("idColor", "colorName") VALUES
+INSERT INTO "Color" ("idColor", "colorName") VALUES
 (2, 'Bluish Red');
-INSERT INTO "public"."Color" ("idColor", "colorName") VALUES
+INSERT INTO "Color" ("idColor", "colorName") VALUES
 (3, 'Bluish Green');
-INSERT INTO "public"."Color" ("idColor", "colorName") VALUES
+INSERT INTO "Color" ("idColor", "colorName") VALUES
 (4, 'Bright green');
-INSERT INTO "public"."Color" ("idColor", "colorName") VALUES
+INSERT INTO "Color" ("idColor", "colorName") VALUES
 (5, 'Bright red'),
 (6, 'Brownish orange'),
 (7, 'Brownish Yellow'),
